@@ -5,7 +5,7 @@
     }
 
     body {
-        background-color:#D6F2D9
+        background-color:#D6F2D9;
         font-family: serif;
         text-align: center;
     }
@@ -53,4 +53,7 @@
         text-align: center;
         display: inline-block;
         padding: 35px
+    }
+    ul li:nth-child(odd) {
+        color:#16e049;
     }
