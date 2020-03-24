@@ -1,0 +1,59 @@
+   
+   h1 {
+        font-family: 'Dancing Script', cursive;
+        text-align: center;
+    }
+
+    body {
+        background-color:#D6F2D9;
+        font-family: serif;
+        text-align: center;
+    }
+
+    .info {
+        color:red;
+    }
+
+    .picture-border {
+        border-radius: 30%;
+    }
+
+    .size {
+        font-size: 18px;
+    }
+
+    #trybe-color {
+        color: #0fa36b;
+    }
+
+    ol, ul {
+        list-style-type: none;
+    }
+
+    .block-1 {
+        padding:6px;
+        position: relative;
+        width: 100%;
+    }
+
+    .position-img {
+        float: left;
+        border-radius: 10px;
+        margin: 1px 10px 1px 250px;
+        padding: 35px;
+        background-color: #4dadc5;
+
+        
+
+    }
+
+    .position-text {
+        width: 30%;
+        margin: 50px 1px 100px;
+        text-align: center;
+        display: inline-block;
+        padding: 35px
+    }
+    ul li:nth-child(odd) {
+        color:#16e049;
+    }
