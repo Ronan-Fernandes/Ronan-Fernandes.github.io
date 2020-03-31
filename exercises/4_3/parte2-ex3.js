@@ -1,5 +1,5 @@
 let array = [2, 4, 6, 7, -10, 0, -3];
-function indiceMaior(array) {
+function indiceMenor(array) {
     let menor = {
         indice: 0,
         numeroMenor: array[0],
@@ -12,4 +12,4 @@ function indiceMaior(array) {
     }
     return menor.indice;
 }
-console.log(indiceMaior(array));
+console.log(indiceMenor(array));
