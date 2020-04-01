@@ -87,9 +87,22 @@
           li.innerHTML = valores[index];
           list.appendChild(li);
       }
+      let h3 = [];
       for (let i = 0; i < 3; i++){
-          let h3 = document.createElement("h3");
-          div1.appendChild(h3);
+          h3[i] = document.createElement("h3");
+          div1.appendChild(h3[i]);
+      }
+      // parte dois dos exercicios 
+      title.className = "title";
+      for (let i = 0; i < 3; i++){
+          h3[i].className = "description";
+      }
+      div1.removeChild(div3);
+      div4.style.marginRight = "auto";
+      div2.parentNode.style.background = "green";
+      let allli = document.getElementsByTagName("li");
+      for(let i = 0; i<2;i++){
+          list.removeChild(allli[(allli.length - 1)])
       }
     </script>
   </body>
