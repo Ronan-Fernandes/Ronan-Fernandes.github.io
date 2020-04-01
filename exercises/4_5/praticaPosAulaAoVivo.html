@@ -60,9 +60,13 @@
       let title = document.createElement("h1");
       title.innerHTML = "Exercício 4.5 - JavaScript DOM";
       document.body.appendChild(title);
-      let varDiv = document.createElement("div");
-      varDiv.className = "main-content";
-      document.body.appendChild(varDiv);
+      let div1 = document.createElement("div");
+      div1.className = "main-content";
+      document.body.appendChild(div1);
+      let div2 = document.createElement("div");
+      div2.className = "center-content";
+      div1.appendChild(div2);
+
     </script>
   </body>
 </html>
