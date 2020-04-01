@@ -79,6 +79,14 @@
       image.src = "https://picsum.photos/200";
       image.className = "small-image";
       div3.appendChild(image);
+      let valores = ["um", "dois", "três", "quatro", "cinco", "seis", "sete", "oito", "nove", "dez"];
+      let list = document.createElement("ul");
+      div4.appendChild(list);
+      for (let index in valores){
+          let li = document.createElement("li");
+          li.innerHTML = valores[index];
+          list.appendChild(li);
+      }
 
     </script>
   </body>
