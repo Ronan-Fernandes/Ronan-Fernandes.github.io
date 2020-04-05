@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href='https://fonts.googleapis.com/css?family=Allura' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Fascinate' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Federant' rel='stylesheet'>
+    <style>
+        body {
+            background-color: aqua;
+        }
+        .selectAll {
+            max-width: 50%;
+            margin: 2px;
+            padding: 4px;
+            border-style: dashed;
+            border-color: black;
+            object-position: left;
+        }
+        .options{
+            float: right;
+            max-width: 45%;
+            padding-right: 50px;
+        }
+        .fontFederant {
+            font-family: 'Federant';
+        }
+        .fontFascinate {
+            font-family: 'Fascinate';
+        }
+        .fontAllura {
+            font-family: 'Allura';
+        }
+    </style>
+</head>
+<body>
+    <h1 id="title" class="selectAll">Lorem ipsum</h1>
+    <div class="options">
+        <ul>
+            <li>Chose background color: <input type="text">
+                <button>Click to change</button></li>
+            <li>Chose text color: <input type="text">
+                <button>Click to change</button></li>
+            <li>Chose font size: <input type="text">
+                <button>Click to change</button></li>
+            <li>Chose line height: <input type="text">
+                <button>Click to change</button></li>
+            <li>Chose font family: 
+                <ul>
+                    <li class="fontFederant">font family Federant : <button class="fontFederant">Click to change</button></li>
+                    <li class="fontFascinate">font family Fascinate : <button class="fontFascinate">Click to change</button></li>
+                    <li class="fontAllura">font family Allura : <button class="fontAllura">Click to change</button></li>
+                  </ul>
+            </li>
+                        
+        </ul>
+
+    </div>
+    <div class="selectAll" id="firstDiv">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, corporis culpa magnam sint sed, eligendi quia amet quo distinctio dolorem nihil alias obcaecati accusantium ad aliquam facilis optio vitae minima!
+    </div>
+    <section class="selectAll" id="firstSection">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat, unde non asperiores expedita illo incidunt ex illum minima veniam neque voluptates at culpa deserunt doloremque deleniti tempore quo debitis. Quia.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus odio, tempora iure obcaecati similique tenetur fuga dolore alias reprehenderit iste illum unde, exercitationem quam aut autem? Numquam tenetur quas sed.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur magnam ipsam assumenda molestiae, facilis dignissimos. Officiis, impedit doloribus deserunt eligendi pariatur quos, quis illo obcaecati rerum dolorum aliquid aspernatur quae!
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia dolor voluptates pariatur ducimus dicta voluptate aperiam nam. Eaque error tenetur dolorem animi qui, sapiente excepturi quis, veritatis nulla distinctio quisquam.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam id adipisci ab in reiciendis ducimus provident perferendis magni iure voluptatum, optio hic dicta? Unde, blanditiis. Numquam sed maxime nobis veniam.
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptas dignissimos assumenda minima velit consectetur minus temporibus soluta reprehenderit, laboriosam odio dolor eaque accusamus saepe suscipit reiciendis nostrum illum dolores. Doloribus.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum aspernatur perferendis commodi error totam qui sapiente suscipit, officia officiis voluptatibus consequuntur nostrum blanditiis numquam et aliquam excepturi quibusdam eveniet facere.
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate fugit qui vitae unde ex architecto quam accusantium, itaque voluptatum numquam delectus beatae. Voluptate sint est rerum maxime nemo quibusdam veniam?
+    </section>
+    <script>
+        function changeBackgroundColor(color){
+            document.body.style.backgroundColor = color;
+        }
+        function changeTextColor(color){
+            document.body.style.color = color;
+        }
+        function changeFontSize(size){
+            document.body.style.fontSize = size + "px";
+        }
+        function changeLineHeight(height){
+            document.body.style.lineHeight = height;
+        }
+        function changeFontFamily(font){
+            document.body.style.fontFamily = font;
+        }
+        window.onload = function() {
+    if (typeof(Storage) !== "undefined") { //this if verifies if the browser can use web storage and it is where all my code about storage will be written
+        let inputs = document.getElementsByTagName("input");
+        let buttons = document.getElementsByTagName("button");
+        let keys = ["backColor", "textColor", "fontSize", "lineHeight", "fontFamily"];
+        let fontButons = [];
+
+        for(let i = 4; i < buttons.length; i++){
+            fontButons.push(buttons[i]);
+        }
+
+        for (let index = 0; index < keys.length; index++){
+            keys[index] = localStorage.getItem(keys[index]);
+            if(keys[index]){
+                switch(index){
+                    case 0:
+                        changeBackgroundColor(keys[index]);
+                        break;
+                    case 1:
+                        changeTextColor(keys[index]);
+                        break;
+                    case 2:
+                        changeFontSize(keys[index]);
+                        break;
+                    case 3:
+                        changeLineHeight(keys[index]);
+                        break;
+                    case 4:
+                        changeFontFamily(keys[index]);
+                        break;
+                }
+            }
+        }
+
+        for (let index = 0; index < buttons.length; index++){
+            buttons[index].addEventListener("click", function(){
+                switch(index){
+                    case 0:
+                        changeBackgroundColor(inputs[index].value);
+                        localStorage.setItem("backColor", inputs[index].value);
+                        break;
+                    case 1:
+                        changeTextColor(inputs[index].value);
+                        localStorage.setItem("textColor", inputs[index].value);
+                        break;
+                    case 2:
+                        changeFontSize(inputs[index].value);
+                        localStorage.setItem("fontSize", inputs[index].value);
+                        break;
+                    case 3:
+                        changeLineHeight(inputs[index].value);
+                        localStorage.setItem("lineHeight", inputs[index].value);
+                        break;
+                    case 4:
+                        changeFontFamily("Federant");
+                        localStorage.setItem("fontFamily", "Federant");
+                        break;
+                    case 5:
+                        changeFontFamily("Fascinate");
+                        localStorage.setItem("fontFamily", "Fascinate");
+                        break;
+                    case 6:
+                        changeFontFamily("Allura");
+                        localStorage.setItem("fontFamily", "Allura");
+                        break;
+                }
+            })
+        }
+
+    } else {  // this is the end of condition true in the if about browser web storage availability
+        console.log("without support for web storage!!!");
+    } 
+}
+    </script>
+</body>
+</html>
