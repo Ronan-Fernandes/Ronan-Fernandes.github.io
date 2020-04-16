@@ -12,60 +12,38 @@
     <form action="" >
       <fieldset>
         <legend>Dados pessoais</legend>
-        <section>
-          <label for="name">Nome</label>
-          <input type="text" id="name" nome="name" maxlength="40" required>
-        </section>
+        <label for="name">Nome</label>
+        <input type="text" id="name" nome="name" maxlength="40" required> 
+        <label for="e-mail">Email</label>
+        <input type="text" id="e-mail" name="e-mail" maxlength="50" required >
+        <label for="cpf">CPF</label>
+        <input type="text" id="cpf" name="cpf" maxlength="11" required>
+        <label for="endereco">Endereço</label>
+        <input type="text" id="endereco" name="endereco" maxlength="200" required >
+        <label for="cidade">Cidade</label>
+        <input type="text" id="cidade" name="cidade" maxlength="28" required >
         <br>
-        <section>
-          <label for="e-mail">Email</label>
-          <input type="text" id="e-mail" name="e-mail" maxlength="50" required pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[A-Z0-9.-]+\.[A-Z]{2,}$">
-        </section>
-        <br>
-        <section>
-          <label for="cpf">CPF</label>
-          <input type="text" id="cpf" name="cpf" maxlength="11" required pattern="[0-9]{3}\.[0-9]{3}\.[0-9]{3}-[0-9]{2}">
-        </section>
-        <br>
-        <section>
-          <label for="endereco">Endereço</label>
-          <input type="text" id="endereco" name="endereco" maxlength="200" required >
-        </section>
-        <br>
-        <section>
-          <label for="cidade">Cidade</label>
-          <input type="text" id="cidade" name="cidade" maxlength="28" required >
-        </section>
-        <br>
-        <section>
-          <label for="estado">Estado</label>
-          <select name="estado" id="estado" required></select>
-        </section>
-        <br>
-        <section>
-          <input type="radio" id="home" name="home-type" value="casa" required>
-          <label for="home">Casa</label>
-          <input type="radio" id="ap" name="home-type" value="ap" required>
-          <label for="ap">Apartamento</label>
-        </section>
+        <label for="estado">Estado</label>
+        <select name="estado" id="estado" required></select>
+        <label>Moradia</label>
+        <input type="radio" id="home" name="home-type" value="casa" required>
+        <label for="home">Casa</label>
+        <input type="radio" id="ap" name="home-type" value="ap" required>
+        <label for="ap">Apartamento</label>     
       </fieldset>
+
       <fieldset>
         <legend>Dados último emprego</legend>
-        <section>
-          <p>Resumo do currículo</p>
-          <textarea name="resumo" id="resumo" cols="30" rows="10" maxlength="1000" required></textarea>
-        </section>
-        <br>
-        <section>
-          <label for="cargo">Cargo</label>
-          <input type="text" id="cargo" maxlength="40" required>
-        </section>
-        <br>
-        <section>
-          <label for="description">Descrição do cargo</label>
-          <input type="text" id="description" maxlength="500" cols="30" rows="10" required>
-        </section>
+        <p>Resumo do currículo</p>
+        <textarea name="resumo" id="resumo" cols="160" rows="10" maxlength="1000" required></textarea>
+        <label for="cargo">Cargo</label>
+        <input type="text" id="cargo" maxlength="40" required>
+        <label for="description">Descrição do cargo</label>
+        <input type="text" id="description" maxlength="500" required>        
+        <label for="date">Data de início</label>
+        <input type="text" id="date" name="date"  pattern="^\d{1,2}\/\d{1,2}\/\d{4}" required>    
       </fieldset>
+      <button id="submit" type="submit">submit</button>
     </form>
     <script src="script.js"></script>
   </body>

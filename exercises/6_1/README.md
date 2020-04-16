@@ -94,7 +94,7 @@ Vamos criar um formulário de cadastro de currículo com base na especificação
 
 3) Logo abaixo do formulário, crie um botão que:
 
-    Chame uma função JavaScript e interrompa o fluxo automático do form utilizando o preventDefault() .
+    Chame uma função JavaScript e interrompa o fluxo automático do form utilizando o preventDefault().
 
     Executa as validações que foram pedidas ao longo da montagem do formulário.
 
