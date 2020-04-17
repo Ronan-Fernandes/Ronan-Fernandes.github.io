@@ -1,4 +1,4 @@
-const Select = document.getElementById('estado');
+// declaração de variaveis ****************************************************************************
 let estados = {
   AC: 'Acre',
 	AL: 'Alagoas',
@@ -28,9 +28,39 @@ let estados = {
 	SE: 'Sergipe',
 	TO: 'Tocantins',
 }
-for(let index in estados) {
-  const option = document.createElement('option');
-  option.value = index;
-  option.innerHTML = estados[index];
-  Select.appendChild(option);
+const buttonSubmit = document.getElementById('submit');
+
+// functions ********************************************************************************************
+function createOptions() {
+  const Select = document.getElementById('estado');
+  for(let index in estados) {
+    const option = document.createElement('option');
+    option.value = index;
+    option.innerHTML = estados[index];
+    Select.appendChild(option);
+  }
+}
+
+function dados() {
+  const divDados = document.createElement('div');
+  const inputs = document.querySelectorAll('input');
+  for (let i = 0; i < inputs.length; i += 1) {
+    const nome = document.createElement('span');
+    const valor = document.createElement('span');
+    nome.innerHTML = `${inputs[i].name}: `;
+    valor.innerHTML = `${inputs[i].value}<br>`;
+    divDados.appendChild(nome);
+    divDados.appendChild(valor);
+  }
+  document.body.appendChild(divDados);
+}
+
+// window on load
+
+window.onload = function () {
+  createOptions();
+  buttonSubmit.addEventListener('click', function (event) {
+    event.preventDefault();
+    dados();
+  });
 }
