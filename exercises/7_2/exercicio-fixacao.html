@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  </head>
+  <style>
+    p {
+      animation-duration: 3s;
+      animation-name: opacity;
+      
+    }
+
+    @keyframes opacity {
+      from {
+        opacity: 0;
+        font-size: 1em;
+        color:red;
+      }
+
+      60% {
+        font-size: 1.5em;
+        color: green;
+      }
+
+      to {
+        opacity: 1;
+        font-size: 1em;
+        color: blue;
+      }
+    }
+
+    h1 {
+      animation-duration: 5s;
+      animation-name: moving;
+      
+    }
+
+    @keyframes moving {
+      from {
+        margin-left: 0%;
+      }
+
+      to {
+        margin-left: 90%;
+      }
+    }
+
+  </style>
+  <body>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat est magni excepturi molestias et consectetur enim maiores sed omnis. Veritatis natus nostrum in, ea quis soluta cupiditate ipsam nihil fugit?</p>
+    <h1>Moving</h1>
+  </body>
+</html>
