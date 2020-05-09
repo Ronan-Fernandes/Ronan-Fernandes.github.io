@@ -67,5 +67,3 @@ console.log(verifyPair(lesson3, 'turno', 'noite'));
 // Output: true,
 console.log(verifyPair(lesson3, 'materia', 'Maria Clara'));
 // Output: false
-    
-
