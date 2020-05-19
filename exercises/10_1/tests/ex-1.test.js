@@ -1,4 +1,4 @@
-const sum = require('./ex-1'); 
+const sum = require('./ex-1');
 
 describe('add', () => {
     test('somar dois numeros', () => {
