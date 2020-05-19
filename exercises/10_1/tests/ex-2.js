@@ -13,3 +13,5 @@ function myIndexOf(arr, item) {
 // implemente seus testes aqui
 assert.strictEqual(myIndexOf([1, 2, 3, 4], 3), 2);
 assert.strictEqual(myIndexOf([1, 2, 3, 4], 5), -1);
+
+module.exports = myIndexOf;

@@ -11,3 +11,5 @@ function mySum(arr) {
 // implemente seus testes aqui
 assert.strictEqual(mySum([1, 2, 3, 4]), 10);
 assert.strictEqual(mySum([1, -2, -3, 4]), 0);
+
+module.exports = mySum;
