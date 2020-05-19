@@ -17,3 +17,9 @@ const obj3 = {
 
 // implemente seus testes aqui
 assert.deepStrictEqual(obj1, obj2);
+
+module.exports = {
+  obj1,
+  obj2,
+  obj3
+}
