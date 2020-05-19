@@ -15,4 +15,4 @@ assert.strictEqual(myFizzBuzz(25), 'buzz');
 assert.strictEqual(myFizzBuzz(7), 7);
 assert.strictEqual(myFizzBuzz('9'), false);
 
-
+module.exports = myFizzBuzz;
