@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import Pokedex from './components/Pokedex';
-import pokemons from './data'
+import pokemons from './data';
 
 function App() {
   console.log(pokemons);
