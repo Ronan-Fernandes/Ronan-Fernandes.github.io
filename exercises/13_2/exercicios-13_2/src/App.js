@@ -40,7 +40,7 @@ import './App.css';
     return (
       <div className='App-header'>
         <p>Dog</p>
-        <button onClick={this.fetchDog}>mais um dog</button>
+        <button onClick={() =>this.fetchDog()}>mais um dog</button>
         <div>
           <img src={this.state.data.message} alt="dog"/>
         </div>
