@@ -3,6 +3,7 @@
   import './App.css';
   import ValidEmail from './ValidEmail';
   
+  console.log(process.env.REACT_APP_KEY)
   class App extends Component {
     constructor(props) {
       super(props);

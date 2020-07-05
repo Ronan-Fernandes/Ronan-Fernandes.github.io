@@ -3,6 +3,8 @@ import React from 'react';
 import { render, fireEvent } from '@testing-library/react';
 import App from './App';
 
+console.log(process.env.REACT_APP_KEY)
+
 test('Verificando se existe o campo Email.', () => {
   const { getByLabelText } = render(<App />);
   const inputEmail = getByLabelText('Email');
