@@ -1,0 +1,1 @@
+const INICIAL_STATE = [];
